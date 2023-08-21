@@ -13,7 +13,7 @@
 .button-59 {
   --b: 6px;   /* border thickness */
   --s: .45em; /* size of the corner */
-  --color: #000000;
+  --color: #fff;
   
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
@@ -43,5 +43,5 @@
 
 .button-59:active {
   background: var(--color);
-  color: #000000;
+  color: #fff;
 }
