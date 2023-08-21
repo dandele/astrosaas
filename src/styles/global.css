@@ -10,7 +10,7 @@
 
 
 /* CSS */
-button {
+.button-59 {
   --b: 3px;   /* border thickness */
   --s: .45em; /* size of the corner */
   --color: #373B44;
@@ -33,14 +33,14 @@ button {
   touch-action: manipulation;
 }
 
-button:hover,
-button:focus-visible{
+.button-59:hover,
+.button-59:focus-visible{
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;
 }
 
-button:active {
+.button-59:active {
   background: var(--color);
   color: #fff;
 }
