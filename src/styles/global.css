@@ -11,7 +11,7 @@
 
 /* CSS */
 .button-59 {
-  --b: 3px;   /* border thickness */
+  --b: 12px;   /* border thickness */
   --s: .45em; /* size of the corner */
   --color: #373B44;
   
@@ -42,5 +42,5 @@
 
 .button-59:active {
   background: var(--color);
-  color: #fff;
+  color: #000000;
 }
