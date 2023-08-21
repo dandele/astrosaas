@@ -13,7 +13,7 @@
 .button-59 {
   --b: 6px;   /* border thickness */
   --s: .45em; /* size of the corner */
-  --color: #fff;
+  --color: #000000;
   
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
