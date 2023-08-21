@@ -105,7 +105,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["Space Mono", ...defaultTheme.fontFamily.sans],
 
       },
     },
