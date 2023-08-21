@@ -130,7 +130,7 @@
 }
 
 .cube:hover .text {
- color: #000000;
+ color: #fff;
  transition: all 0.4s;
 }
 
