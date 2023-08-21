@@ -137,7 +137,7 @@
 .cube:hover .bg-right,
 .cube:hover .bg,
 .cube:hover .bg-top {
- background: #fff;
+ background: #000;
 }
 
 .cube:active {
