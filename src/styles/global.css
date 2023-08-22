@@ -154,10 +154,10 @@
 }
 
 .most-popular {
+  width: auto;
+  display: flex;
   position: absolute;
   left: 60%;
-  top: 426%;
-  bottom: auto;
   background-color: #000; 
   color: #fff;
   padding: 6px 9px;
