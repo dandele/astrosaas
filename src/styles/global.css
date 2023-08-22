@@ -55,7 +55,7 @@
  background: transparent;
  outline: none;
  border: 0;
- color: #000000;
+ color: #fff;
  letter-spacing: 0.1em;
  font-family: monospace;
  font-size: 17px;
@@ -71,7 +71,7 @@
 .cube .bg-top {
  position: absolute;
  height: 10px;
- background: #000;
+ background: #fff;
  bottom: 100%;
  left: 5px;
  right: -5px;
@@ -90,15 +90,15 @@
  bottom: 0;
  top: 0;
  right: 0;
- background: #000;
+ background: #fff;
  transition: all 0.4s;
  border: 0;
- color: #fff;
+ color: #000;
 }
 
 .cube .bg-right {
  position: absolute;
- background: #000;
+ background: #fff;
  top: -5px;
  z-index: 0;
  bottom: 5px;
@@ -113,7 +113,7 @@
 }
 
 .cube .bg-inner {
- background: #fff;
+ background: #000;
  position: absolute;
  left: 2px;
  right: 2px;
@@ -127,7 +127,7 @@
 }
 
 .cube:hover .bg-inner {
- background: #000;
+ background: #fff;
  transition: all 0.4s;
 }
 
@@ -139,7 +139,7 @@
 .cube:hover .bg-right,
 .cube:hover .bg,
 .cube:hover .bg-top {
- background: #fff;
+ background: #000;
 }
 
 .cube:active {
