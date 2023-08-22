@@ -92,6 +92,8 @@
  right: 0;
  background: #000;
  transition: all 0.4s;
+ border: 0;
+ color: #fff;
 }
 
 .cube .bg-right {
@@ -137,7 +139,7 @@
 .cube:hover .bg-right,
 .cube:hover .bg,
 .cube:hover .bg-top {
- background: #000;
+ background: #fff;
 }
 
 .cube:active {
