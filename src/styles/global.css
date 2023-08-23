@@ -164,6 +164,14 @@
   padding: 6px 9px;
 }
 
+@media only screen and (max-width: 600px) {
+  .most-popular {
+    position: absolute;
+    right: 0;
+    top: -4%;
+  }
+}
+
 .heartbeat {
 	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
 	        animation: heartbeat 1.5s ease-in-out infinite both;
