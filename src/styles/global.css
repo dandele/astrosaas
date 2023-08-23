@@ -167,7 +167,7 @@
 @media only screen and (max-width: 600px) {
   .most-popular {
     position: absolute;
-    left: 40%;
+    right: 40%;
     top: -4%;
   }
 }
