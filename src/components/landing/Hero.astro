@@ -39,7 +39,7 @@
           href="#pricing">
           <span>Scopri i piani</span>
           <ion-icon name="chevron-forward-outline"></ion-icon>
-          </a>
+        </a>
       </div>
       {/* <dl
         class="lg:gap-x-8 lg:grid-cols-3 max-w-4xl mt-8 mx-auto sm:gap-x-6 sm:gap-y-12 sm:grid sm:grid-cols-2 sm:space-y-0 space-y-6 text-center text-sm items-start">
@@ -89,22 +89,22 @@
         <img alt="logo" class="max-h-12 " src="/Gumroad.svg" />
       </div>
     </div> */}
-    <div class="marquee flex flex-row px-2 overflow-hidden w-full">
+    <div class="marquee flex flex-row px-2 overflow-hidden h-scren w-full">
       <div class="inner grid grid-cols-2 gap-0.5 lg:mt-8 md:grid-cols-6 mt-6">
-        <div class="flex justify-center w-full h-full px-8">
-          <img alt="logo" class="img-marquee h-full w-full" src="/making_in_italy.webp" />
+        <div class="flex justify-center px-8">
+          <img alt="logo" class="img-marquee" src="/making_in_italy.webp" />
         </div>
-        <div class="flex justify-center w-full px-8">
-          <img alt="logo" class="img-marquee h-full" src="/valland.webp" />
+        <div class="flex justify-center px-8">
+          <img alt="logo" class="img-marquee" src="/valland.webp" />
         </div>
-        <div class="flex justify-center w-full col-span-1 px-8">
-          <img alt="logo" class="img-marquee h-full w-full" src="/becreatives.webp" />
+        <div class="flex justify-center px-8">
+          <img alt="logo" class="img-marquee" src="/becreatives.webp" />
         </div>
-        <div class="flex justify-center w-full col-span-1 px-8">
-          <img alt="logo" class="img-marquee h-full w-full" src="/loffredo.webp" />
+        <div class="flex justify-center px-8">
+          <img alt="logo" class="img-marquee" src="/loffredo.webp" />
         </div>
-        <div class="flex justify-center w-full col-span-1 px-8">
-          <img alt="logo" class="img-marquee h-full w-full" src="/bonnie_beauty.webp" />
+        <div class="flex justify-center px-8">
+          <img alt="logo" class="img-marquee" src="/bonnie_beauty.webp" />
         </div>
       </div>
 
@@ -157,12 +157,66 @@
     width: 100%;
   }
 
-  @media only screen and (max-width: 600px) {
+    {
+    /* @media only screen and (max-width: 600px) {
   .marquee .inner img {
     height: auto;
     width: 100%;
   }
 }
+*/
+  }
+
+  @media only screen and (max-width: 600px) {
+    .marquee .inner img {
+      height: 100%;
+      width: 150px;
+      max-width: none;
+    }
+
+    .img-marquee {
+      -moz-animation: marquee 7s linear infinite;
+      -webkit-animation: marquee 7s linear infinite;
+      animation: marquee 7s linear infinite;
+    }
+
+    @-moz-keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-700%);
+      }
+    }
+
+    @-webkit-keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-700%);
+      }
+    }
+
+    @keyframes marquee {
+      0% {
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+      }
+
+      100% {
+        -moz-transform: translateX(-700%);
+        -webkit-transform: translateX(-700%);
+        transform: translateX(-700%);
+      }
+
+    }
+
+  }
+
 
   .marquee .inner {
     display: flex;
