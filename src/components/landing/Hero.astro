@@ -89,33 +89,60 @@
         <img alt="logo" class="max-h-12 " src="/Gumroad.svg" />
       </div>
     </div> */}
-    <div class="marquee flex flex-row px-2 overflow-hidden h-scren w-full">
-      <div class="inner grid grid-cols-2 gap-0.5 lg:mt-8 md:grid-cols-6 mt-6">
-        <div class="flex justify-center px-8">
-          <img alt="logo" class="img-marquee" src="/making_in_italy.webp" />
+    <div class="flex flex-row px-2 overflow-hidden whitespace-no-wrap">
+      <div class="inner relative gap-0.5 lg:mt-8 mt-6">
+        <ul class="flex animate-marquee">
+          <li class="m-8"><img alt="logo" class="" src="/making_in_italy.webp" /></li>
+          <li class="m-8"><img alt="logo" class="marquee-img" src="/valland.webp" /></li>
+          <li class="m-8"><img alt="logo" class="marquee-img" src="/becreatives.webp" /></li>
+          <li class="m-8"><img alt="logo" class="marquee-img" src="/bonnie.webp" /></li>
+          <li class="m-8"><img alt="logo" class="marquee-img" src="/loffredo.webp" /></li>
+        </ul>
+        <ul class="flex absolute top-0 animate-marquee2">
+          <li class="m-8"><img alt="logo" class="marquee-img" src="/making_in_italy.webp" /></li>
+          <li class="m-8"><img alt="logo" class="marquee-img" src="/valland.webp" /></li>
+          <li class="m-8"><img alt="logo" class="marquee-img" src="/becreatives.webp" /></li>
+          <li class="m-8"><img alt="logo" class="marquee-img" src="/bonnie.webp" /></li>
+          <li class="m-8"><img alt="logo" class="marquee-img" src="/loffredo.webp" /></li>
+        </ul>
+        {/* <div class="flex justify-center px-8">
+          <img alt="logo" class="" src="/making_in_italy.webp" />
         </div>
         <div class="flex justify-center px-8">
-          <img alt="logo" class="img-marquee" src="/valland.webp" />
+          <img alt="logo" class="" src="/valland.webp" />
         </div>
         <div class="flex justify-center px-8">
-          <img alt="logo" class="img-marquee" src="/becreatives.webp" />
+          <img alt="logo" class="" src="/becreatives.webp" />
         </div>
         <div class="flex justify-center px-8">
-          <img alt="logo" class="img-marquee" src="/bonnie.webp" />
+          <img alt="logo" class="" src="/bonnie.webp" />
         </div>
         <div class="flex justify-center px-8">
-          <img alt="logo" class="img-marquee" src="/loffredo.webp" />
-        </div>
-      </div>
+          <img alt="logo" class="" src="/loffredo.webp" />
+        </div> */}
 
+      </div>
     </div>
 </section>
 
 <style>
+  @media only screen and (max-width: 600px) {
+    .marquee-img {
+      height: 100%;
+      width: 170px;
+      max-width: none;
+    }
+  }
+</style>
+
+{/* OLD MARQUEE
+
+
+<style>
   .img-marquee {
-    -moz-animation: marquee 7s linear infinite;
-    -webkit-animation: marquee 7s linear infinite;
-    animation: marquee 7s linear infinite;
+    -moz-animation: marquee 14s ease-in-out infinite;
+    -webkit-animation: marquee 7s ease-in-out infinite;
+    animation: marquee 7s ease-in-out infinite;
   }
 
   @-moz-keyframes marquee {
@@ -124,7 +151,7 @@
     }
 
     100% {
-      transform: translateX(-300%);
+      transform: translateX(-50%);
     }
   }
 
@@ -134,7 +161,7 @@
     }
 
     100% {
-      transform: translateX(-300%);
+      transform: translateX(-50%);
     }
   }
 
@@ -142,13 +169,13 @@
     0% {
       -moz-transform: translateX(0);
       -webkit-transform: translateX(0);
-      transform: translateX(0)
+      transform: translateX(0);
     }
 
     100% {
-      -moz-transform: translateX(-300%);
-      -webkit-transform: translateX(-300%);
-      transform: translateX(-300%);
+      -moz-transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
     }
   }
 
@@ -157,20 +184,17 @@
     width: 100%;
   }
 
-    {
-    /* @media only screen and (max-width: 600px) {
   .marquee .inner img {
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: 170px;
+    max-width: none;
   }
-}
-*/
-  }
+
 
   @media only screen and (max-width: 600px) {
     .marquee .inner img {
       height: 100%;
-      width: 150px;
+      width: 170px;
       max-width: none;
     }
 
@@ -182,35 +206,35 @@
 
     @-moz-keyframes marquee {
       0% {
-        transform: translateX(0);
+        transform: translateX(20%);
       }
 
       100% {
-        transform: translateX(-700%);
+        transform: translateX(-600%);
       }
     }
 
     @-webkit-keyframes marquee {
       0% {
-        transform: translateX(0);
+        transform: translateX(20%);
       }
 
       100% {
-        transform: translateX(-700%);
+        transform: translateX(-600%);
       }
     }
 
     @keyframes marquee {
       0% {
-        -moz-transform: translateX(0);
-        -webkit-transform: translateX(0);
-        transform: translateX(0)
+        -moz-transform: translateX(20%);
+        -webkit-transform: translateX(20%);
+        transform: translateX(20%)
       }
 
       100% {
-        -moz-transform: translateX(-700%);
-        -webkit-transform: translateX(-700%);
-        transform: translateX(-700%);
+        -moz-transform: translateX(-600%);
+        -webkit-transform: translateX(-600%);
+        transform: translateX(-600%);
       }
 
     }
@@ -228,3 +252,4 @@
     white-space: nowrap;
   }
 </style>
+*/}
