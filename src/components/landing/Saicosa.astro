@@ -6,9 +6,9 @@
                 E sai una cosa?
             </h2>
         </div>
-        <div class="mx-auto h-18 text-center">
+        <div class="mx-auto text-center">
             <p
-                class="js-show-on-scroll mt-4 w-auto h-16 border-black border-r-2 mx-auto tracking-tight text-slate-500  overflow-hidden animate-typing2 tracking-tighter mx-auto">
+                class="js-show-on-scroll mt-4 w-auto h-12 md:h-6 h-16 border-black border-r-2 mx-auto tracking-tight text-slate-500  overflow-hidden animate-typing2 tracking-tighter mx-auto">
                 La prima agenzia Notion in Italia, non è
                 un'agenzia!</p>
         </div>
@@ -23,9 +23,16 @@
         width: auto;
         display: flex;
         position: absolute;
-        right: -10%;
-        top: 65%;
+        right: 5%;
+        top: 60%;
         rotate: 10deg;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .gif-style {
+            right: -10%;
+            top: 65%;
+        }
     }
 </style>
 
