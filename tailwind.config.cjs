@@ -115,7 +115,8 @@ module.exports = {
         marquee4: 'marquee4 15s linear infinite',
         typing: "typing 3s steps(20) alternate, blink .7s infinite",
         typing2: "typing2 6s steps(20) alternate, blink .7s infinite",
-        gifentrance: "gifentrance 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) 6.5s both"
+        gifentrance: "gifentrance 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) 6.5s both",
+        fadein: "fadein 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both"
       },
       keyframes: {
         marquee: {
@@ -165,6 +166,14 @@ module.exports = {
           "100%": {
             transform: "scale(1)",
             filter: "blur(0px)",
+            opacity: "1"
+          }
+        },
+        fadein: {
+          "0%": {
+            opacity: "0"
+          },
+          "100%": {
             opacity: "1"
           }
         },

@@ -1,25 +1,63 @@
 <section>
-    <div class="h-screen flex flex-col justify-center">
+    <div class="h-screen relative flex flex-col justify-center">
         <div class="mx-auto w-min text-center">
             <h2
-                class="text-black max-w-none animate-typing overflow-hidden whitespace-nowrap font-extrabold lg:text-5xl text-4xl tracking-tighter mx-auto">
+                class="js-show-on-scroll text-black max-w-none animate-typing overflow-hidden whitespace-nowrap font-extrabold lg:text-5xl text-4xl tracking-tighter mx-auto">
                 E sai una cosa?
             </h2>
         </div>
         <div class="mx-auto h-18 text-center">
             <p
-                class="mt-4 w-auto h-16 border-black border-r-2 mx-auto tracking-tight text-slate-500  overflow-hidden animate-typing2 tracking-tighter mx-auto">
+                class="js-show-on-scroll mt-4 w-auto h-16 border-black border-r-2 mx-auto tracking-tight text-slate-500  overflow-hidden animate-typing2 tracking-tighter mx-auto">
                 La prima agenzia Notion in Italia, non è
                 un'agenzia!</p>
         </div>
-        <img class="gif-style" src="/what.webp" alt="">
+        <div class="js-show-on-scroll gif-style animate-gifentrance drop-shadow-2xl">
+            <img src="/what.webp" alt="">
+        </div>
     </div>
 </section>
 
 <style>
     .gif-style {
-        bottom: 0;
-        width: 100%;
+        width: auto;
+        display: flex;
         position: absolute;
+        right: -10%;
+        top: 65%;
+        rotate: 10deg;
     }
 </style>
+
+<script>
+    // Get all the elements you want to show on scroll
+    const targets = document.querySelectorAll(".js-show-on-scroll");
+
+    // Set up a new observer
+    const observer = new IntersectionObserver(callback);
+
+    // Loop through each of the target
+    targets.forEach(function (target) {
+        // Hide the element
+        target.classList.add("opacity-0");
+
+        // Add the element to the watcher
+        observer.observe(target);
+    });
+
+    // Callback for IntersectionObserver
+    const callback = function (entries) {
+        entries.forEach(entry => {
+
+            // Is the element in the viewport?
+            if (entry.isIntersecting) {
+
+                // Add the fadeIn class:
+                entry.target.classList.add("animate-typing");
+            } else {
+
+                // Otherwise remove the fadein class
+                entry.target.classList.remove("animate-typing");
+            }
+        });
+};</script>
