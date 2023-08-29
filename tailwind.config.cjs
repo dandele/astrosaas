@@ -114,7 +114,7 @@ module.exports = {
         marquee3: 'marquee3 15s linear infinite',
         marquee4: 'marquee4 15s linear infinite',
         typing: "typing 3s steps(20) alternate, blink .7s infinite",
-        typing2: "typing2 7s steps(20) 3000ms alternate, blink .7s infinite"
+        typing2: "typing2 6s steps(20) alternate, blink .7s infinite"
       },
       keyframes: {
         marquee: {
@@ -144,6 +144,10 @@ module.exports = {
         },
         typing2: {
           "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "60%": {
             width: "0%",
             visibility: "hidden"
           },
