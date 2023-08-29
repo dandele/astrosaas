@@ -112,7 +112,9 @@ module.exports = {
         marquee: 'marquee 15s linear infinite',
         marquee2: 'marquee2 15s linear infinite',
         marquee3: 'marquee3 15s linear infinite',
-        marquee4: 'marquee4 15s linear infinite'
+        marquee4: 'marquee4 15s linear infinite',
+        typing: "typing 3s steps(20) alternate, blink .7s infinite",
+        typing2: "typing2 7s steps(20) 3000ms alternate, blink .7s infinite"
       },
       keyframes: {
         marquee: {
@@ -130,6 +132,32 @@ module.exports = {
         marquee4: {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(0%)' }
+        },
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }  
+        },
+        typing2: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }  
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent"
+          },
+          "100%": {
+            borderColor: "black"
+          }  
         }
       },
     },
