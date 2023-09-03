@@ -1,55 +1,150 @@
-<script>
-    document.documentElement.classList.add('preparation');
-</script>
 <section>
     <div class="h-screen reveal relative flex flex-col justify-center">
         <div class="mx-auto w-min text-center">
-            <h2
+            <h2 id="typewriterh2"
                 class="text-black max-w-none animate-typing overflow-hidden whitespace-nowrap font-extrabold lg:text-5xl text-4xl tracking-tighter mx-auto">
                 E sai una cosa?
             </h2>
         </div>
         <div class="mx-auto text-center">
-            <p
+            <p id="typewriterp"
                 class="mt-4 w-auto h-12 md:h-6 h-16 border-black border-r-2 mx-auto tracking-tight text-slate-500  overflow-hidden animate-typing2 tracking-tighter mx-auto">
                 La prima agenzia Notion in Italia, non è
                 un'agenzia!</p>
         </div>
-        <div class=" gif-style animate-gifentrance drop-shadow-2xl">
-            <img src="/what.webp" alt="">
+        <div class="absolute right-3 top-2/3">
+            <div id="typewritergif" class="gif-style drop-shadow-2xl">
+                <img class="gif-style" src="/what.webp" alt="">
+            </div>
         </div>
     </div>
 </section>
 
 <style>
+    /* Definizione dell'animazione gifentrance */
+    @keyframes gifentrance {
+        0% {
+            transform: scale(2);
+            filter: blur(4px);
+            opacity: 0;
+        }
+
+        60% {
+            transform: scale(2);
+            filter: blur(4px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            filter: blur(0px);
+            opacity: 1;
+        }
+    }
+
+    /* Applicazione dell'animazione gifentrance all'elemento .gif-style */
     .gif-style {
+        animation: gifentrance 0.7s linear 8.5s both;
         width: auto;
-        display: flex;
-        position: absolute;
-        right: 5%;
-        top: 60%;
         rotate: 10deg;
     }
 
+    /* Regole CSS aggiuntive per il posizionamento su schermi più piccoli */
     @media only screen and (max-width: 600px) {
         .gif-style {
             right: -10%;
             top: 65%;
         }
     }
-
-    .preparation article {
-        opacity: 0;
-    }
-
-    article {
-        opacity: 1;
-        transition: opacity 300ms ease-in;
-    }
 </style>
 
+
+{/* Script mio
+
 <script>
-    window.onload = function () {
-        document.documentElement.classList.remove('preparation');
-    };
+    const the_animation = document.querySelectorAll('#typewriterh2')
+    const the_Panimation = document.querySelectorAll('#typewriterp')
+
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-typing')
+            }
+            else {
+                entry.target.classList.remove('animate-typing')
+            }
+
+        })
+    },
+        {
+            threshold: 0.5
+        });
+    //
+    for (let i = 0; i < the_animation.length; i++) {
+        const elements = the_animation[i];
+
+        observer.observe(elements);
+    }
+
+</script>
+
+*/}
+
+{/* Scipt ChatGPT */}
+
+<script>
+    const the_animation = document.querySelectorAll('#typewriterh2');
+    const the_Panimation = document.querySelectorAll('#typewriterp');
+    const the_gif = document.querySelector('#typewritergif'); // Seleziona l'elemento img
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-typing');
+
+                // Aggiungi classe all'elemento p
+                if (entry.target.id === 'typewriterp') {
+                    the_Panimation.forEach((pElement) => {
+                        pElement.classList.add('animate-typing2');
+                    });
+                }
+
+                // Aggiungi classe all'elemento img
+                if (entry.target.id === 'typewritergif') {
+                    the_gif.classList.add('gif-style');
+                }
+            } else {
+                entry.target.classList.remove('animate-typing');
+
+                // Rimuovi classe dall'elemento p
+                if (entry.target.id === 'typewriterp') {
+                    the_Panimation.forEach((pElement) => {
+                        pElement.classList.remove('animate-typing2');
+                    });
+                }
+
+                // Rimuovi classe dall'elemento img
+                if (entry.target.id === 'typewritergif') {
+                    the_gif.classList.remove('gif-style');
+                }
+            }
+        });
+    },
+        {
+            threshold: 0.5
+        });
+
+    // Aggiungi l'observer per l'elemento del tag h2
+    the_animation.forEach((element) => {
+        observer.observe(element);
+    });
+
+    // Aggiungi l'observer per l'elemento del tag p
+    the_Panimation.forEach((element) => {
+        observer.observe(element);
+    });
+
+    // Aggiungi l'observer per l'elemento img (la GIF)
+    observer.observe(the_gif);
 </script>
