@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
-   site: 'https://unwraped.design',
+   site: 'https://www.notionbuilders.it',
   integrations: [tailwind(),  sitemap()]
 });
