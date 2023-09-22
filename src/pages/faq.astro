@@ -4,12 +4,13 @@
   import Faq from "../components/infopages/Faq.astro";
   import Footer from "../components/global/Footer.astro";
   import { AstroSeo } from "@astrolib/seo";
+  import Hero_Event from "../components/landing/Hero_Event.astro";
 ---
 
 <!---
 Use AstroSeo in all the pages you want different Seo than the index page
 -->
-<AstroSeo title="Notion Builders" description="La tua azienda su Notion, in abbonamento"
+<AstroSeo title="Notion Event Milan" description="Il più grande evento Notion in Italia"
   canonical="https://www.notionbuilders.it" openGraph={{ url: "https://www.notionbuilders.it" , title: "Notion Builders"
   , description: "La tua azienda su Notion, in abbonamento" , images: [ {
   url: "https://www.notionbuilders.it/social-og.jpg" , width: 1200, height: 630, alt: "Social open graph" ,
@@ -19,6 +20,6 @@ Use AstroSeo in all the pages you want different Seo than the index page
   handle: "@Mike_Andreuzza" , site: "@site" , cardType: "summary_large_image" , }} />
 <BaseLayout>
   <Navigation />
-  <Faq />
+  <Hero_Event />
   <Footer />
 </BaseLayout>
