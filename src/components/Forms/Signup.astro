@@ -14,24 +14,16 @@
           <input name="hidden" autocomplete="false" style="display:none" />
           <input name="_redirect" type="hidden" value="#" />
           <div class="space-y-6">
-            <div class="w-full flex flex-row gap-3">
-              <div class="w-full">
-                <label class="sr-only" for="first_name">First name</label>
-                <input
-                  class="w-full focus:outline-none border py-3 appearance-none bg-slate-50 block border-slate-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-slate-400 px-3 rounded-xl sm:text-sm text-accent-500"
-                  id="first_name" name="first_name" autocomplete="given-name" required="" />
-              </div>
-              <div class="w-full">
-                <label class="sr-only" for="last_name">Last name</label><input
-                  class="w-full focus:outline-none border py-3 appearance-none bg-slate-50 block border-slate-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-slate-400 px-3 rounded-xl sm:text-sm text-accent-500"
-                  id="last_name" name="last_name" autocomplete="family-name" required="" />
-              </div>
-            </div>
             <div class="col-span-full">
               <label class="sr-only" name="company">Email</label>
               <input
                 class="w-full focus:outline-none border py-3 appearance-none bg-slate-50 block border-slate-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-slate-400 px-3 rounded-xl sm:text-sm text-accent-500"
                 placeholder="Qual è il tuo indirizzo email?" type="email" />
+            </div>
+            <div class="col-span-full">
+              <button
+                class="items-center justify-center rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-black border-2 border-black duration-200 focus-visible:ring-black hover:bg-transparent hover:border-black hover:text-black px-6 py-3 text-center text-white w-full"
+                type="submit">Iscriviti</button>
             </div>
           </div>
         </form>
