@@ -1,4 +1,4 @@
-<section class="h-screen flex flex-col place-content-center">
+<section class="h-screen background flex flex-col place-content-center">
   <div class=" flex flex-row place-content-center h-4/6 relative justify-center lg:px-0 md:px-12 overflow w-full">
     <div
       class="bg-white shadow-2xl shadow-black relative flex flex-1 flex-row place-content-center lg:py-24 md:flex-none sm:justify-center xl:py-36 z-10 w-2/5 ">
@@ -17,13 +17,35 @@
             <div class="col-span-full border border-black">
               <label class="sr-only" name="email">Email</label>
               <input id="email" name="Email"
-                class="w-full focus:outline-none py-3 appearance-none bg-slate-50 block border-slate-200 focus:bg-white focus:border-accent-500 focus:ring-accent-500 placeholder-slate-400 px-3 rounded-xl sm:text-sm text-accent-500"
+                class="w-full focus:outline-none py-3 appearance-none bg-white block border-slate-200 focus:bg-white  focus:ring-accent-500 placeholder-slate-400 px-3 sm:text-sm text-accent-500"
                 placeholder="Qual è il tuo indirizzo email?" type="Email" />
             </div>
-            <div class="col-span-full">
+            {/* <div class="col-span-full">
               <button
                 class="items-center justify-center rounded-xl focus-visible:outline-black focus:outline-none inline-flex bg-black border-2 border-black duration-200 focus-visible:ring-black hover:bg-transparent hover:border-black hover:text-black px-6 py-3 text-center text-white w-full"
                 type="submit">Iscriviti</button>
+            </div> */}
+            <div class="flex justify-center gap-3 mt-10 flex-col sm:flex-row">
+              <button
+                class="items-center btn cube cube-hover justify-center font-medium inline-flex bg-black duration-200 hover:bg-transparent hover:text-whiste lg:w-auto px-6 py-3 text-center text-white w-full"
+                type="submit">
+                <div class="bg-top">
+                  <div class="bg-inner"></div>
+                </div>
+                <div class="bg-right">
+                  <div class="bg-inner"></div>
+                </div>
+                <div class="bg">
+                  <div class="bg-inner"></div>
+                </div>
+                <div class="text">Iscriviti</div>
+              </button>
+              {/* <a
+                class="items-center justify-center font-bold focus-visible:outline-black focus:outline-none inline-flex duration-200 text-black lg:w-auto px-6 py-3 text-center text-black/80 w-full hover:underline"
+                href="#pricing">
+                <span></span>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </a>*/}
             </div>
           </div>
         </form>
@@ -31,3 +53,10 @@
     </div>
   </div>
 </section>
+
+
+<style>
+  .background {
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='30' height='30' patternTransform='scale(1) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0,0%,100%,1)'/><path d='M0 22.5h30v15H0zm15-15h30v15H15m-30-15h30v15h-30zm15-15h30v15H0z'  stroke-width='1' stroke='hsla(259, 0%, 0%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-29,-31)' fill='url(%23a)'/></svg>");
+  }
+</style>
