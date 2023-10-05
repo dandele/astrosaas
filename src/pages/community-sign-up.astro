@@ -1,6 +1,8 @@
 ---
   import BaseLayout from "../layouts/BaseLayout.astro";
+  import Navigation from "../components/global/Navigation.astro";
   import Signup from "../components/Forms/Signup.astro";
+  import Footer from "../components/global/Footer.astro";
   import { AstroSeo } from "@astrolib/seo";
 ---
 
@@ -16,5 +18,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
   }, { url: "https://www.michaelandreuzza.com/opengraph/twitter-og.jpg" }, ], site_name: "YourSitesName" , }} twitter={{
   handle: "@Mike_Andreuzza" , site: "@site" , cardType: "summary_large_image" , }} />
 <BaseLayout>
+  <Navigation />
   <Signup />
+  <Footer />
 </BaseLayout>
