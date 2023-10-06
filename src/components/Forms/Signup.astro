@@ -17,11 +17,13 @@
             <div class="col-span-full border border-black">
               <label class="sr-only" name="email">Email</label>
               <input id="email" name="Email"
-                class="w-full focus:outline-black py-3 appearance-none bg-white block border-slate-200 focus:bg-white  focus:ring-black placeholder-slate-400 px-3 sm:text-sm text-black"
+                class="w-full focus:outline-none py-3 appearance-none bg-white block border-slate-200 focus:bg-white  focus:ring-black placeholder-slate-400 px-3 sm:text-sm text-black"
                 placeholder="Qual è il tuo indirizzo email?" type="Email" required />
             </div>
             <div class="col-span-full flex flex-row space-x-2">
-              <input type="checkbox" id="privacy-checkbox" required />
+              <input type="checkbox" id="privacy-checkbox"
+                class="checked:focus:ring-black focus:ring-black checked:focus:bg-black checked:bg-black checked:hover:bg-black indeterminate:focus:ring-black default:focus:ring-black indeterminate:ring-black default:ring-black"
+                required />
               <span for="privacy-checkbox" class="pb-2">Accetto la privacy policy</span><br>
             </div>
             {/* <div class="col-span-full">
