@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avvia Scenario</title>
+</head>
+<body>
+    <a href="javascript:void(0);" id="avviaScenario">Avvia Scenario</a>
+
+    <script>
+        document.getElementById('avviaScenario').addEventListener('click', function() {
+            // Esegui la richiesta CURL quando viene cliccato il link
+            fetch('https://eu1.make.com/api/v2/scenarios/2010896/run', {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Token 4a288101-7def-47e1-9982-8034e15b22be'
+                }
+            })
+            .then(response => {
+                if (response.status === 200) {
+                    // Se la richiesta ha avuto successo, puoi fare qualcosa, come redirezionare a una pagina di conferma
+                    window.location.href = 'pagina_di_conferma.html';
+                } else {
+                    // Se la richiesta non ha avuto successo, gestisci l'errore di conseguenza
+                    alert('Errore nell\'avvio dello scenario');
+                }
+            })
+            .catch(error => {
+                console.error('Errore:', error);
+            });
+        });
+    </script>
+</body>
+</html>
