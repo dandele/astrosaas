@@ -1,8 +1,13 @@
 ---
   import BaseLayout from "../layouts/BaseLayout.astro";
   import Navigation from "../components/global/Navigation.astro";
-  import Signup from "../components/Forms/Signup.astro";
+  import Hero from "../components/landing/Hero-agency-os.astro";
+  import Team from "../components/landing/Team.astro";
   import Footer from "../components/global/Footer.astro";
+  import Features from "../components/landing/agency_os-features.astro";
+  import Vantaggi from "../components/landing/agency_os-vantaggi.astro";
+  import Timer from "../components/landing/agency_os-timer.astro";
+  import Pricing from "../components/landing/agency_os-pricing.astro";
   import { AstroSeo } from "@astrolib/seo";
 ---
 
@@ -19,8 +24,12 @@ Use AstroSeo in all the pages you want different Seo than the index page
   url: "https://www.notionbuilders.it/hero.webp" }, ], site_name: "Notion Builders" , }} twitter={{ handle: "" ,
   site: "@site" , cardType: "summary_large_image" , }} />
 <BaseLayout>
-<script src="https://gumroad.com/js/gumroad.js"></script>
-<a class="gumroad-button" href="https://notionbuilders.gumroad.com/l/agency-os" data-gumroad-overlay-checkout="true">Buy on</a>
-<script src="https://gumroad.com/js/gumroad-embed.js"></script>
-<div class="gumroad-product-embed"><a href="https://notionbuilders.gumroad.com/l/agency-os">Loading...</a></div>
+    <Navigation />
+    <Hero />
+    <Features />
+    <Team />
+    <Vantaggi />
+    <Timer />
+    <Pricing />
+    <Footer />
 </BaseLayout>
