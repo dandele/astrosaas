@@ -4,6 +4,7 @@
   import Hero from "../components/landing/Hero-agency-os.astro";
   import Team from "../components/landing/Team.astro";
   import Footer from "../components/global/Footer.astro";
+  import Banner from "../components/global/Banner.astro";
   import Features from "../components/landing/agency_os-features.astro";
   import Vantaggi from "../components/landing/agency_os-vantaggi.astro";
   import Timer from "../components/landing/agency_os-timer.astro";
@@ -26,6 +27,7 @@ Use AstroSeo in all the pages you want different Seo than the index page
   url: "https://www.notionbuilders.it/hero.webp" }, ], site_name: "Notion Builders" , }} twitter={{ handle: "" ,
   site: "@site" , cardType: "summary_large_image" , }} />
 <BaseLayout>
+    <Banner />
     <Navigation />
     <Hero />
     <Intro />
